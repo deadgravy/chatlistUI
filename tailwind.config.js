@@ -10,5 +10,9 @@ module.exports = {
   variants: {
     extend: {},
   },
+  daisyui: {
+    themes: [ "light"],
+  },
   plugins: [require("daisyui")],
+  
 }

@@ -39,6 +39,7 @@ export default function MyPosts() {
               onClick={() => deletePost(post.id)}
             >Delete List</button>
             <button class="btn btn-primary">Button</button>
+            <button class="btn btn-secondary">Button</button>
           </div>
         ))
       }
