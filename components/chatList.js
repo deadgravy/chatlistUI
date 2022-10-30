@@ -6,13 +6,17 @@ import { useState } from 'react';
 
 const Home = () => {
     const [isHovering, setIsHovering] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
 
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+    };
     const handleMouseOver = () => {
         setIsHovering(true);
     };
 
     const handleMouseOut = () => {
-        setIsHovering(false);
+
     };
 
 
@@ -74,76 +78,99 @@ const Home = () => {
                 <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-y-auto w-80 bg-base-200 text-base-content">
-                        <li>
+                        <li className='group'>
                             <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-
-                                <div className="avatar online">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/191/people" />
-                                    </div>
+                                <div className='w-1/6'>
+                                    {isHovering && (
+                                        <input
+                                            type='checkbox'
+                                            checked={isChecked}
+                                            onChange={handleOnChange}
+                                            className='checkbox hidden group-hover:block'
+                                        />
+                                    )}
                                 </div>
 
-                                Aditya Adeeb (Leong Seng Metal Pte.Ltd.)
+                                <div className='w-5/6'>
+                                    <div className='avatar online'>
+                                        <div className='w-12 rounded-full'>
+                                            <img src='https://placeimg.com/192/191/people' />
+                                        </div>
+                                    </div>
+                                    Aditya Adeeb (Leong Seng Metal Pte.Ltd.)
+                                </div>
+                            </a>
+                        </li>
+                        <li className='group'>
+                            <a>
+                                <div className='w-1/6'>
+                                    {isHovering && (
+                                        <input
+                                            type='checkbox'
+                                            checked={isChecked}
+                                            onChange={handleOnChange}
+                                            className='checkbox hidden group-hover:block'
+                                        />
+                                    )}
+                                </div>
+
+                                <div className='w-5/6'>
+                                    <div className='avatar online'>
+                                        <div className='w-12 rounded-full'>
+                                            <img src='https://placeimg.com/192/191/people' />
+                                        </div>
+                                    </div>
+                                    Aditya Adeeb (Leong Seng Metal Pte.Ltd.)
+                                </div>
+                            </a>
+                        </li>
+                        <li className='group'>
+                            <a>
+                                <div className='w-1/6'>
+                                    {isHovering && (
+                                        <input
+                                            type='checkbox'
+                                            checked={isChecked}
+                                            onChange={handleOnChange}
+                                            className='checkbox hidden group-hover:block'
+                                        />
+                                    )}
+                                </div>
+
+                                <div className='w-5/6'>
+                                    <div className='avatar online'>
+                                        <div className='w-12 rounded-full'>
+                                            <img src='https://placeimg.com/192/191/people' />
+                                        </div>
+                                    </div>
+                                    Aditya Adeeb (Leong Seng Metal Pte.Ltd.)
+                                </div>
+                            </a>
+                        </li>
+                        <li className='group'>
+                            <a>
+                                <div className='w-1/6'>
+                                    {isHovering && (
+                                        <input
+                                            type='checkbox'
+                                            checked={isChecked}
+                                            onChange={handleOnChange}
+                                            className='checkbox hidden group-hover:block'
+                                        />
+                                    )}
+                                </div>
+
+                                <div className='w-5/6'>
+                                    <div className='avatar online'>
+                                        <div className='w-12 rounded-full'>
+                                            <img src='https://placeimg.com/192/191/people' />
+                                        </div>
+                                    </div>
+                                    Aditya Adeeb (Leong Seng Metal Pte.Ltd.)
+                                </div>
                             </a>
                         </li>
 
-                        <li>
-                            <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-                                <div className="avatar offline">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/190/people" />
-                                    </div>
-                                </div>
-                                Javier Fok(Hock Seng Hoe Metal Company)
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-                                <div className="avatar offline">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/194/people" />
-                                    </div>
-                                </div>
-                                Shelby Yeo (Iron-Man Fabrication Pte Ltd)
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-                                <div className="avatar offline">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/193/people" />
-                                    </div>
-                                </div>
-                                George (Jalitar Metals Pte Ltd)
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-                                <div className="avatar offline">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/196/people" />
-                                    </div>
-                                </div>
-                                Louis (Kato Metals Singapore Pte Ltd)
-                            </a>
-                        </li>
-
-                        <li>
-                            <a>
-                                {isHovering && (<input type="checkbox" checked="checked" className="checkbox" />)}
-                                <div className="avatar offline">
-                                    <div className="w-12 rounded-full">
-                                        <img src="https://placeimg.com/192/197/people" />
-                                    </div>
-                                </div>
-                                Name (Company)
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
